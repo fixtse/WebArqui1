@@ -6,13 +6,10 @@
 package com.mycompany.arqui1web;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.PrintWriter;
-import java.net.HttpURLConnection;
-import java.net.URL;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javafx.beans.binding.When;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,7 +17,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.xml.bind.JAXBContext;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -173,21 +170,7 @@ public class ws extends HttpServlet {
             processRequest(request, response);
             
             
-            
-//        String uri =
-//            "http://localhost:8080/CustomerService/rest/customers/1";
-//        URL url = new URL(uri);
-//        HttpURLConnection connection =
-//            (HttpURLConnection) url.openConnection();
-//        connection.setRequestMethod("GET");
-//        connection.setRequestProperty("Accept", "application/xml");
-//
-//        JAXBContext jc = JAXBContext.newInstance(Customer.class);
-//        InputStream xml = connection.getInputStream();
-//        Customer customer =
-//            (Customer) jc.createUnmarshaller().unmarshal(xml);
-//
-//        connection.disconnect();
+          
         } catch (InterruptedException ex) {
             Logger.getLogger(ws.class.getName()).log(Level.SEVERE, null, ex);
         }
